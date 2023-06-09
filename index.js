@@ -1,9 +1,9 @@
 let express = require('express');
 let app = express();
-let pieRepo = require('./repos/pieRepo.js');
+let pieRepo = require('./repos/pieRepo');
+console.log(pieRepo)
 
 let router = express.Router();
-// let pies = pieRepo.get();
 
 router.get('/', function(req, res, next) {
     pieRepo.get(function (data) {
